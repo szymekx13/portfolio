@@ -1,18 +1,8 @@
 # foldery edytorów
 .vscode/
-.idea/
 
 # pliki tymczasowe
-*.log
 *.tmp
-
-# katalogi buildów (jeśli używasz np. Webpacka)
-dist/
-build/
 
 # środowisko
 .env
-
-# systemowe pliki
-.DS_Store
-Thumbs.db
