@@ -178,3 +178,14 @@ footer{
 #projects{
   user-select: none;
 }
+.tech-icons img{
+    width: 90px;
+    height: 90px;
+    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+    padding: 60px;
+    transition: 0.5s transform ease-in-out;
+}
+.tech-icons img:hover{
+    transform: scale(1.07);
+}
