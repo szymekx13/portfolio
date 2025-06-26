@@ -10,3 +10,5 @@ This site was built using HTML, CSS and little bit of JS.
 - CSS3
 - JavaScript
 - Git & GitHub Pages
+
+➡️ [Live Site](https://szymekx13.github.io/portfolio/)
