@@ -12,3 +12,6 @@ This site was built using HTML, CSS and little bit of JS.
 - Git & GitHub Pages
 
 ➡️ [Live Site](https://szymekx13.github.io/portfolio/)
+
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
