@@ -223,11 +223,11 @@ body:not(.light-mode) .pogoda {
   margin: 16px auto 0 auto;
   width: 400px;
   transition: color 0.3s ease-in-out;
-  color: #0077b6;
+  color: white;
 }
 
 .pogoda a:hover {
-  color: #023e8a;
+  color: #3ea9de;
 }
 
 footer {
@@ -253,4 +253,14 @@ footer {
 
 #theme-toggle:hover img {
   transform: scale(1.2);
+}
+body.light-mode .pogoda a{
+  color: black;
+  transition: ;
+}
+body.light-mode .pogoda a:hover{
+  color: #3ea9de;
+}
+#typewriter{
+  display: inline-block;
 }

@@ -26,3 +26,40 @@ toggleButton.addEventListener("click", () => {
     themeIcon.src = "icons/sun.svg"; // ciemny motyw
   }
 });
+
+//Animacja wpisywania tekstu about me
+const wyrazy = ["high-school student", "programmer", "web developer"];
+let index = 0;
+let letterindex = 0;
+
+function erase(){
+  const word = wyrazy[index];
+  const part = word.slice(0, letterindex - 1);
+  document.getElementById("typewriter").textContent = part;
+
+  letterindex--;
+
+  if(letterindex>0){
+    setTimeout(erase, 50);
+  }else{
+    index++;
+    if(index>=wyrazy.length) index = 0;
+    setTimeout(write, 300)
+  }
+}
+
+function write(){
+  const word = wyrazy[index];
+  const part = word.slice(0, letterindex + 1);
+  document.getElementById("typewriter").textContent = part;
+
+  letterindex++;
+  
+  if(letterindex<word.length){
+    setTimeout(write, 100);
+  }else if(letterindex == word.length){
+    setTimeout(erase, 1000);
+  }
+}
+
+write();
