@@ -13,5 +13,9 @@ jobs:
       - uses: anmol098/waka-readme-stats@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+<<<<<<< HEAD
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPOSITORY: szymekx13/portfolio
+=======
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+>>>>>>> 25812192a874d3cd7e524cce1acf862d369f604f
