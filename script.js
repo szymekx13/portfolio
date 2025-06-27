@@ -26,4 +26,3 @@ toggleButton.addEventListener("click", () => {
     themeIcon.src = "icons/sun.svg"; // ciemny motyw
   }
 });
-
