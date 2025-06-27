@@ -13,5 +13,7 @@ This site was built using HTML, CSS and little bit of JS.
 
 ➡️ [Live Site](https://szymekx13.github.io/portfolio/)
 
+## 📊 My WakaTime stats
+
 <!--START_SECTION:waka-->
 <!--END_SECTION:waka-->
