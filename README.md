@@ -13,7 +13,8 @@ This site was built using HTML, CSS and little bit of JS.
 
 ➡️ [Live Site](https://szymekx13.github.io/portfolio/)
 
-## 📊 My WakaTime stats
+## 📊 My stats
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=szymekx13&show_icons=true)
+
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=szymekx13)](https://github.com/szymekx13/github-readme-stats)
