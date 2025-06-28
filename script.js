@@ -28,7 +28,7 @@ toggleButton.addEventListener("click", () => {
 });
 
 //Animacja wpisywania tekstu about me
-const wyrazy = ["high-school student", "programmer", "web developer",];
+const wyrazy = ["High-school student", "Programmer", "Web developer",];
 let index = 0;
 let letterindex = 0;
 
