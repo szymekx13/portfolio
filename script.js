@@ -63,3 +63,22 @@ function write(){
 }
 
 write();
+//Animacja dla tech-icons żeby "załadowały się" po najechaniu 
+document.addEventListener("DOMContentLoaded", function () {
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const techIconGroups = entry.target.querySelectorAll(".tech-icons");
+        techIconGroups.forEach(group => {
+          group.classList.add("animate-tech-icons");
+        });
+        observer.unobserve(entry.target); // tylko raz
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  const sectionTechno = document.querySelector("#techno");
+  if (sectionTechno) observer.observe(sectionTechno);
+});
