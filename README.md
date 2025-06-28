@@ -15,5 +15,5 @@ This site was built using HTML, CSS and little bit of JS.
 
 ## 📊 My WakaTime stats
 
-<!--START_SECTION:waka-->
-<!--END_SECTION:waka-->
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=szymekx13&show_icons=true)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=szymekx13)](https://github.com/szymekx13/github-readme-stats)
