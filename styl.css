@@ -328,7 +328,7 @@ body.light-mode nav>a{
   color: #1e1e1e;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.200);
 }
-  #mobile-nav {
+#mobile-nav {
     position: fixed;
     bottom: 70px;
     left: 50%;
@@ -345,7 +345,7 @@ body.light-mode nav>a{
     animation: fadeIn 0.3s ease forwards;
   }
 
-  #mobile-nav a {
+#mobile-nav a {
     color: white;
     text-decoration: none;
     padding: 8px 10px;
@@ -354,9 +354,22 @@ body.light-mode nav>a{
     transition: background-color 0.3s;
   }
 
-  #mobile-nav a:hover {
+#mobile-nav a:hover {
     background-color: rgba(255, 255, 255, 0.1);
   }
+body.light-mode #mobile-nav {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode #mobile-nav a {
+  color: #1e1e1e;
+}
+
+body.light-mode #mobile-nav a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
 
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px) translateX(-50%); }
