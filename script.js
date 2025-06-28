@@ -63,32 +63,39 @@ function write(){
 }
 
 write();
-//Animacja dla tech-icons żeby "załadowały się" po najechaniu 
+//Animacja dla tech-icons żeby "załadowały się" po najechaniu
 document.addEventListener("DOMContentLoaded", function () {
-  const observer = new IntersectionObserver((entries, observer) => {
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const techIconGroups = entry.target.querySelectorAll(".tech-icons");
-        techIconGroups.forEach(group => {
-          group.classList.add("animate-tech-icons");
-        });
+        entry.target.classList.add("animate-tech-icons");
         observer.unobserve(entry.target); // tylko raz
       }
     });
   }, {
-    threshold: 0.3
+    threshold: 0.2
   });
 
-  const sectionTechno = document.querySelector("#techno");
-  if (sectionTechno) observer.observe(sectionTechno);
+  const techIcons = document.querySelector(".tech-icons");
+  if (techIcons) observer.observe(techIcons);
 });
-const toggleMenu = document.getElementById("mobile-menu-toggle");
-const mobileNav = document.getElementById("mobile-nav");
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleMenu = document.getElementById("mobile-menu-toggle");
+    const mobileNav = document.getElementById("mobile-nav");
 
-toggleMenu.addEventListener("click", () => {
-  if (mobileNav.style.display === "flex") {
-    mobileNav.style.display = "none";
-  } else {
-    mobileNav.style.display = "flex";
-  }
-});
+    toggleMenu.addEventListener("click", () => {
+      if (mobileNav.style.display === "flex") {
+        mobileNav.style.display = "none";
+      } else {
+        mobileNav.style.display = "flex";
+      }
+    });
+
+    // Auto-zamknięcie po kliknięciu w link
+    const links = mobileNav.querySelectorAll("a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        mobileNav.style.display = "none";
+      });
+    });
+  });
