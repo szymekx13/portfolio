@@ -82,3 +82,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const sectionTechno = document.querySelector("#techno");
   if (sectionTechno) observer.observe(sectionTechno);
 });
+const toggleMenu = document.getElementById("mobile-menu-toggle");
+const mobileNav = document.getElementById("mobile-nav");
+
+toggleMenu.addEventListener("click", () => {
+  if (mobileNav.style.display === "flex") {
+    mobileNav.style.display = "none";
+  } else {
+    mobileNav.style.display = "flex";
+  }
+});
