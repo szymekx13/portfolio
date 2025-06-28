@@ -351,12 +351,13 @@ body.light-mode nav>a{
 
   header nav {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
   }
 
   header nav > a {
-    display: block;
+    display: inline-block;
     width: 90%;
     margin: 10px 0;
     font-size: 1.1em;
