@@ -189,6 +189,12 @@ body:not(.light-mode) .sidebar-icons img {
   opacity: 0;
   transform: translateY(30px);
 }
+.tech-icons img:hover {
+  transform: scale(1.7) rotate(3deg); /* 💡 powiększenie + obrót */
+  background: rgba(0, 119, 182, 0.15);
+  box-shadow: 0 12px 24px rgba(0, 119, 182, 0.4); /* 💡 bardziej świecący cień */
+  z-index: 1;
+}
 .animate-tech-icons img {
   animation: fadeInUp 0.8s ease-in-out both;
 }
