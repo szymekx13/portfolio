@@ -79,17 +79,34 @@ document.addEventListener("DOMContentLoaded", function () {
   const techIcons = document.querySelector(".tech-icons");
   if (techIcons) observer.observe(techIcons);
 });
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggleMenu = document.getElementById("mobile-menu-toggle");
-    const mobileNav = document.getElementById("mobile-nav");
-
-    toggleMenu.addEventListener("click", () => {
-      if (mobileNav.style.display === "flex") {
-        mobileNav.style.display = "none";
-      } else {
-        mobileNav.style.display = "flex";
+document.addEventListener("DOMContentLoaded", function () {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate-tech-icons");
+        observer.unobserve(entry.target); // tylko raz
       }
     });
+  }, {
+    threshold: 0.2
+  });
+
+  // 🔁 Pobierz wszystkie sekcje tech-icons i dodaj obserwatora
+  const techIconsAll = document.querySelectorAll(".tech-icons");
+  techIconsAll.forEach(icon => observer.observe(icon));
+
+  // 🔽 Menu mobilne
+  const toggleMenu = document.getElementById("mobile-menu-toggle");
+  const mobileNav = document.getElementById("mobile-nav");
+
+  toggleMenu.addEventListener("click", () => {
+    if (mobileNav.style.display === "flex") {
+      mobileNav.style.display = "none";
+    } else {
+      mobileNav.style.display = "flex";
+    }
+  });
+
 
     // Auto-zamknięcie po kliknięciu w link
     const links = mobileNav.querySelectorAll("a");
