@@ -1,6 +1,6 @@
 # foldery edytorów
 .vscode/
-./.idea
+.idea/
 
 # pliki tymczasowe
 *.tmp
