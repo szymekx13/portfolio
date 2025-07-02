@@ -295,7 +295,7 @@ footer {
   transition: background-color 0.3s, color 0.3s;
 }
 
-#theme-toggle {
+/*#theme-toggle {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -313,10 +313,13 @@ footer {
 
 #theme-toggle:hover img {
   transform: scale(1.2);
+}*/
+#theme-toggle{
+  all: unset;
 }
 body.light-mode .pogoda a{
   color: black;
-  transition: ;
+  transition: all 1s ease-in-out;
 }
 body.light-mode .pogoda a:hover{
   color: #3ea9de;
@@ -327,6 +330,9 @@ body.light-mode .pogoda a:hover{
 body.light-mode nav>a{
   color: #1e1e1e;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.200);
+}
+#mobile-menu-toggle{
+  display: none;
 }
 #mobile-nav {
     position: fixed;
@@ -369,7 +375,15 @@ body.light-mode #mobile-nav a {
 body.light-mode #mobile-nav a:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
-
+.separator{
+  width: 1px;
+  height: 35px;
+  background-color: #555;
+  opacity: 0.7;
+}
+body.light-mode .separator{
+  background-color: rgb(28, 28, 28);
+}
 
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px) translateX(-50%); }
@@ -468,5 +482,8 @@ body.light-mode #mobile-nav a:hover {
 
   a {
     font-size: 1em;
+  }
+  #mobile-menu-toggle {
+    display: inline;
   }
 }

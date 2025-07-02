@@ -11,10 +11,7 @@
 <body>
 
 <header>
-  <button id="theme-toggle" aria-label="Toggle dark/light mode">
-    <img id="theme-icon"  src="icons/sun.svg" alt="light/dark">
-  </button>
-  <h1>Hi I'm Szymon Niedbała</h1>
+  <h1>Szymon Niedbała</h1>
   <p><span class="typewriter" id="typewriter"></span></p>
   <nav id="mobile-nav">
     <a href="#about">About</a>
@@ -111,8 +108,11 @@
   </a>
   <a href="mailto:szymekn11@gmail.com">
     <img src="icons/email.svg" alt="Email">
-  </a>
+  </a> <div class="separator"></div>
   <img src="icons/menu.svg" alt="Menu" id="mobile-menu-toggle">
+  <button id="theme-toggle" aria-label="Toggle dark/light mode">
+    <img id="theme-icon"  src="icons/sun.svg" alt="light/dark">
+  </button>
 </div>
 <section id="contact">
 
@@ -123,7 +123,7 @@
 </section>
 
   <script src="script.js"></script>
-<!-- lepszy sposób jest na górze i z oddzielnym plikiem JS
+<!-- created better script in other file
 <script>
   function updateTime() {
     const now = new Date();
