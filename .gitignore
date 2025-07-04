@@ -1,8 +1,9 @@
-# foldery edytorów
+# Foldery edytorów
+.vscode/
 .idea/
 
-# pliki tymczasowe
+# Pliki tymczasowe
 *.tmp
 
-# środowisko
+# Pliki środowiskowe
 .env
