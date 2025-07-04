@@ -121,3 +121,24 @@ AOS.init({
     duration: 800, // czas animacji w ms
     easing: 'ease-in-out', // styl animacji
   });
+
+
+
+/* created better script in other file
+<script>
+  function updateTime() {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString([], {
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+    const timeEl = document.getElementById('local-time');
+    if (timeEl) {
+      timeEl.textContent = `Local Time: ${timeString}`;
+    }
+  }
+
+  updateTime();
+  setInterval(updateTime, 1000);
+</script>
+*/
