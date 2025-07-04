@@ -116,3 +116,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+AOS.init({
+    once: true, // animuje tylko raz
+    duration: 800, // czas animacji w ms
+    easing: 'ease-in-out', // styl animacji
+  });

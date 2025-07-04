@@ -5,14 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="google" content="notranslate">
   <link rel="stylesheet" href="styl.css">
-  <link rel="icon" href="icons/profilepicture.png" type="image/x-icon">
+  <link rel="icon" href="icons/profilepicture.png" type="image/x-icon" style="border-radius: 50%;">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+  <script src="script.js" defer></script>
   <title>Szymon Niedbała | Portfolio</title>
 </head>
 <body>
 
 <header>
-  <h1>Szymon Niedbała</h1>
-  <p><span class="typewriter" id="typewriter"></span></p>
+  <div data-aos="fade-in">
+    <h1>Szymon Niedbała</h1>
+    <p><span class="typewriter" id="typewriter"></span></p>
+  </div>
   <nav id="mobile-nav">
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
@@ -20,16 +28,18 @@
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#techno">Technologies</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <div data-aos="fade-in">
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#techno">Technologies</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
 </header>
-
 <section id="about">
+  <div data-aos="fade-up">
   <h2>About Me</h2>
   <div class="linijka"></div>
   <p>
@@ -42,21 +52,25 @@
   <p>
     My future goal is to become a full-stack developer and keep expanding my knowledge in areas like JavaScript, API integrations, and UI design.
   </p>
+  </div>
 </section>
 
 <section id="skills">
-  <h2>My skills</h2>
-  <div class="linijka"></div>
-    <ul>
-      <li>Creating responsive websites using <strong>HTML5, CSS3 and JS</strong></li>
-      <li>Understanding and modifying JS logic</li>
-      <li>Version control using <strong>Git and GitHub</strong> (commits, push/pull etc.)</li>
-      <li>Basic <strong>C++</strong> programming</li>
-      <li>Debugging and solving <strong>layout problems</strong> in CSS</li>
-      <li>Using <strong>VS Code and WebStorm</strong> as development enviorments</li>
-      <li>Learning <strong>independently and working in groups</strong></li>
-      <li>English on <strong>advanced</strong> level (reading, writing and speaking)</li>
-    </ul>
+    <div data-aos="fade-up">
+    <h2>My skills</h2>
+    <div class="linijka"></div>
+      <ul>
+        <li>Creating responsive websites using <strong>HTML5, CSS3 and JS</strong></li>
+        <li>Understanding and modifying JS logic</li>
+        <li>Version control using <strong>Git and GitHub</strong> (commits, push/pull etc.)</li>
+        <li>Basic <strong>C++</strong> programming</li>
+        <li>Debugging and solving <strong>layout problems</strong> in CSS</li>
+        <li>Using <strong>VS Code and WebStorm</strong> as development enviorments</li>
+        <li>Learning <strong>independently and working in groups</strong></li>
+        <li>English on <strong>advanced</strong> level (reading, writing and speaking)</li>
+        <li>Backend development using PHP and MySQL</li>
+      </ul>
+    </div>
 </section>
 <section id="techno">
   <h2>Technologies I Use</h2>
@@ -67,6 +81,7 @@
     <img src="icons/css.svg" alt="CSS">
     <img src="icons/html5.svg" alt="HTML">
     <img src="icons/js.svg" alt="JS">
+    <img src="icons/php.svg" alt="PHP">
   </div>
   <h3>Tools: </h3>
   <div class="tech-icons">
@@ -80,14 +95,17 @@
   <div class="linijka"></div>
   <div class="projects">
     <div class="project">
-      <div class="pogoda">
-      <h3>Weather App</h3>
-        <img src="icons/weather_app.png" alt="WeatherApp"><br>
-        <p>A simple one page website to serch the weather in your</p>
-        <p>location. Programmed in HTML, CSS and JavaScript.</p>
-        <a href="https://github.com/szymekx13/WeatherApp" target="_blank">Link to project</a>
+      <div data-aos="fade-up">
+        <div class="pogoda">
+        <h3>Weather App</h3>
+          <img src="icons/weather_app.png" alt="WeatherApp"><br>
+          <p>A simple one page website to serch the weather in your</p>
+          <p>location. Programmed in HTML, CSS and JavaScript.</p>
+          <a href="https://github.com/szymekx13/WeatherApp" target="_blank">Link to project</a>
+        </div>
       </div>
     </div>
+    <div data-aos="fade-up">
     <div class="project">
       <h3>Project 2</h3>
       <p>Description coming soon...</p>
@@ -96,6 +114,7 @@
       <h3>Project 3</h3>
       <p>Description coming soon...</p>
     </div>
+  </div>
   </div>
 </section>
 
@@ -118,11 +137,13 @@
 
   <h2>Contact</h2>
   <div class="linijka"></div>
-    <p id="local-time"></p>
-  <p class="contact">Feel free to reach out: <a href="mailto:szymekn11@gmail.com">szymekn11@gmail.com</a></p>
+    <div data-aos="fade-up">
+      <p id="local-time"></p>
+      <p class="contact">Feel free to reach out: <a href="mailto:szymekn11@gmail.com">szymekn11@gmail.com</a></p>
+    </div>
 </section>
 
-  <script src="script.js"></script>
+
 <!-- created better script in other file
 <script>
   function updateTime() {

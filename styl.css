@@ -2,9 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Outfit', sans-serif;
   margin: 0;
   transition: background-color 0.3s, color 0.3s;
+  line-height: 1.5;
 }
 
 body.light-mode {
@@ -316,6 +317,7 @@ footer {
 }*/
 #theme-toggle{
   all: unset;
+  cursor: pointer;
 }
 body.light-mode .pogoda a{
   color: black;
