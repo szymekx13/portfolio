@@ -386,6 +386,64 @@ body.light-mode #mobile-nav a:hover {
 body.light-mode .separator{
   background-color: rgb(28, 28, 28);
 }
+.contact-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* dla responsywności */
+  margin-top: 30px;
+}
+.contact-info-box {
+  flex: 1 1 300px;
+  max-width: 400px;
+  background-color: #1e1e1e;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.1);
+  color: #f0f0f0;
+  transition: all 0.3s ease;
+}
+body.light-mode .contact-info-box {
+  background-color: #ffffff;
+  color: #1e1e1e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info-box h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #00ffff;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 90px;
+  padding: 10px 20px;
+  backdrop-filter: blur(10px); /*ładny blur żeby lepiej wyglądało*/
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 12px;
+  transition: transform 0.3s, background-color 0.3s;
+  cursor: pointer;
+  filter: brightness(0) invert(1); /* Invert colors for dark mode */
+}
+
+.social-icons img:hover {
+  transform: scale(1.25);
+  background-color: rgba(0, 255, 255, 0.25); /* bardziej intensywny */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* świecący cień */
+  padding: 10px; /* większy obszar tła na hover */
+  border-radius: 16px;
+}
+
 
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px) translateX(-50%); }

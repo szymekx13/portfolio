@@ -6,7 +6,7 @@ function updateClock() {
 
     const localtime = document.getElementById("local-time");
     if (localtime) {
-        localtime.textContent = "Local time: " + godzina + ":" + minuta;
+        localtime.textContent = " " + godzina + ":" + minuta;
     }
 }
 
@@ -121,8 +121,6 @@ AOS.init({
     duration: 800, // czas animacji w ms
     easing: 'ease-in-out', // styl animacji
   });
-
-
 
 /* created better script in other file
 <script>
