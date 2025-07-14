@@ -140,3 +140,43 @@ AOS.init({
   setInterval(updateTime, 1000);
 </script>
 */
+// ikony w sidebar dostały animacje po kliknięciu w nie
+document.querySelectorAll('.sidebar-icons img').forEach(icon => {
+
+  icon.addEventListener('mousedown', () => {
+    icon.style.transform = 'scale(0.8)';
+  })
+
+  icon.addEventListener('mouseup', () => {
+    icon.style.transform = 'scale(1)';
+  })
+
+  icon.addEventListener('mouseleave', () => {
+    icon.style.transform = 'scale(1)';
+  })
+
+})
+
+// Scrollspy – podświetlanie aktywnej sekcji w nav
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+  let currentSection = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      currentSection = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + currentSection) {
+      link.classList.add("active");
+    }
+  });
+});
