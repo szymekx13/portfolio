@@ -156,6 +156,22 @@ document.querySelectorAll('.sidebar-icons img').forEach(icon => {
   })
 
 })
+// ikony w sekcji social-icons mają taką samą animacje jak te w sidebar
+document.querySelectorAll('.social-icons img').forEach(icon => {
+
+  icon.addEventListener('mousedown', () => {
+    icon.style.transform = 'scale(0.8)';
+  })
+
+  icon.addEventListener('mouseup', () => {
+    icon.style.transform = 'scale(1)';
+  })
+
+  icon.addEventListener('mouseleave', () => {
+    icon.style.transform = 'scale(1)';
+  })
+
+})
 
 // Scrollspy – podświetlanie aktywnej sekcji w nav
 const sections = document.querySelectorAll("section");
