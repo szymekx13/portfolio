@@ -368,30 +368,26 @@ body.light-mode nav>a{
   color: #1e1e1e;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.200);
 }
-#mobile-menu-toggle {
-  position: fixed; /* lub absolute, zależnie od layoutu */
-  top: 1rem;
-  right: 1rem;
-  z-index: 10000; /* nad mobile-nav */
-}
-
-#mobile-nav {
+#mobile-menu-toggle{
   display: none;
-  flex-direction: column;
-  position: fixed; /* WAŻNE */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh; /* lub auto jeśli chcesz tylko wysokość elementów */
-  background-color: #121212; /* przykładowe tło */
-  z-index: 9999; /* upewnij się, że jest nad innymi elementami */
-  padding: 2rem;
-  transition: transform 0.3s ease-in-out;
-  transform: translateY(-100%);
 }
-#mobile-nav.active {
-  transform: translateY(0);
-}
+#mobile-nav {
+    position: fixed;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(30, 30, 30, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 10px 20px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    animation: fadeIn 0.3s ease forwards;
+  }
+
 #mobile-nav a {
     color: white;
     text-decoration: none;
