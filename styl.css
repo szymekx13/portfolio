@@ -373,7 +373,7 @@ body.light-mode nav>a{
 }
 #mobile-nav {
     position: fixed;
-    bottom: 70px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(30, 30, 30, 0.9);
@@ -493,6 +493,41 @@ body.light-mode .social-icons img:hover {
   padding: 10px;
   border-radius: 16px;
 }
+/* Styl dla nav-wrapper, żeby pozycjonowanie miało sens */
+.nav-wrapper {
+  position: relative;
+  background-color: #222;
+  padding: 1rem;
+}
+
+/* Przycisk */
+#mobile-menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Ukryte menu domyślnie */
+#mobile-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Pokazane menu */
+#mobile-nav.active {
+  display: flex;
+}
 
 
   @keyframes fadeIn {
@@ -596,5 +631,21 @@ body.light-mode .social-icons img:hover {
   }
   #mobile-menu-toggle {
     display: inline;
+  }
+  #mobile-nav{
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(30, 30, 30, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 10px 20px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    animation: fadeIn 0.3s ease forwards;
   }
 }

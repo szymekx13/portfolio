@@ -95,19 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const techIconsAll = document.querySelectorAll(".tech-icons");
   techIconsAll.forEach(icon => observer.observe(icon));
 
-  // 🔽 Menu mobilne
-  const toggleMenu = document.getElementById("mobile-menu-toggle");
-  const mobileNav = document.getElementById("mobile-nav");
-
-  toggleMenu.addEventListener("click", () => {
-    if (mobileNav.style.display === "flex") {
-      mobileNav.style.display = "none";
-    } else {
-      mobileNav.style.display = "flex";
-    }
-  });
-
-
     // Auto-zamknięcie po kliknięciu w link
     const links = mobileNav.querySelectorAll("a");
     links.forEach(link => {
