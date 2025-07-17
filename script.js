@@ -172,7 +172,6 @@ document.querySelectorAll('.social-icons img').forEach(icon => {
   })
 
 })
-
 // Scrollspy – podświetlanie aktywnej sekcji w nav
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav a");
@@ -194,5 +193,15 @@ window.addEventListener("scroll", () => {
     if (link.getAttribute("href") === "#" + currentSection) {
       link.classList.add("active");
     }
+  });
+});
+// Dodanie efektu hover dla linków w nawigacji
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("mouseenter", () => {
+    link.classList.add("hover-effect");
+  });
+
+  link.addEventListener("mouseleave", () => {
+    link.classList.remove("hover-effect");
   });
 });

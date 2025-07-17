@@ -77,40 +77,59 @@ body:not(.light-mode) header nav > a {
   color: #f0f0f0;
   box-shadow: 0 0 5px rgba(0, 188, 212, 0.2);
 }
+/* Nowy, poprawiony kod CSS */
 
 nav a {
-  display: inline-block;
-  margin: 0 10px;
-  text-decoration: none;
-  transition: transform 0.3s ease-in-out;
   position: relative;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px; /* Kontener z zaokrąglonymi rogami */
+  z-index: 0;
+  transition: color 0.3s ease-in-out;
+  overflow: hidden; /* Dodane, aby obciąć element ::before */
 }
 
+nav a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(135deg, #0077b6, #00ffff);
+  transform: translateX(-101%) skewX(0deg);
+  transform-origin: left;
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: -1;
+}
+
+nav a:hover::before {
+  transform: translateX(0) skewX(0deg);
+}
+
+nav a:hover {
+  color: black;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+}
+
+/* Podkreślenie */
 nav a::after {
   content: '';
   position: absolute;
   bottom: -3px;
   left: 0;
   height: 2px;
-  background: #0077b6;
+  background: #00ffff;
   width: 0%;
   transition: width 0.3s ease-in-out;
 }
 
-nav a:hover {
-  transform: scale(1.05);
-}
-
-nav a:hover::after {
-  width: 100%;
-}
+nav a:hover::after,
 nav a.active::after {
   width: 100%;
-  background: #00ffff;
-}
-
-nav a.active {
-  color: #00ffff;
 }
 section {
   margin: 20px auto;
