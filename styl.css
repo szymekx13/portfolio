@@ -386,8 +386,12 @@ body.light-mode nav>a{
   background-color: #121212; /* przykładowe tło */
   z-index: 9999; /* upewnij się, że jest nad innymi elementami */
   padding: 2rem;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(-100%);
 }
-
+#mobile-nav.active {
+  transform: translateY(0);
+}
 #mobile-nav a {
     color: white;
     text-decoration: none;

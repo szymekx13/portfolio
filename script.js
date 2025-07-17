@@ -100,13 +100,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileNav = document.getElementById("mobile-nav");
 
   toggleMenu.addEventListener("click", () => {
-    if (mobileNav.style.display === "flex") {
-      mobileNav.style.display = "none";
-    } else {
-      mobileNav.style.display = "flex";
-    }
-  });
-
+    mobileNav.classList.toggle("active")
+ });
 
     // Auto-zamknięcie po kliknięciu w link
     const links = mobileNav.querySelectorAll("a");
