@@ -1,3 +1,6 @@
+* {
+  transition: background-color 0.5s, color 0.5s;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -17,7 +20,30 @@ body:not(.light-mode) {
   background-color: #121212;
   color: #f0f0f0;
 }
-
+#about a{
+  display: block;
+  text-align: center;
+  margin: 16px auto 0 auto;
+  width: 400px;
+  transition: 
+    color 0.4s ease-in-out,
+    background-color 0.4s ease-in-out,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  color: white;
+  background-color: #0077b6;
+  padding: 10px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 119, 182, 0.4);
+  font-weight: bold;
+  text-decoration: none;
+}
+#about a:hover{
+  color: #3ea9de;
+  background-color: #005f8a;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 94, 138, 0.7);
+}
 header, footer {
   padding: 20px;
   margin: 0;
@@ -604,7 +630,7 @@ body.light-mode .social-icons img:hover {
 
   .pogoda {
     width: 95%;
-    padding: 20px;
+    padding: 15px;
   }
 
   .pogoda a {
@@ -631,21 +657,5 @@ body.light-mode .social-icons img:hover {
   }
   #mobile-menu-toggle {
     display: inline;
-  }
-  #mobile-nav{
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(30, 30, 30, 0.9);
-    backdrop-filter: blur(10px);
-    border-radius: 16px;
-    padding: 10px 20px;
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    z-index: 999;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    animation: fadeIn 0.3s ease forwards;
   }
 }
