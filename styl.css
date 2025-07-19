@@ -566,6 +566,38 @@ body.light-mode .social-icons img:hover {
       display: none;
     }
   }
+@media(max-width: 320px){
+  #about a{
+    width: 100%;
+  }
+  .contact-info-box{
+    width: 90%;
+    margin: 10px auto;
+  }.contact-info-box img{
+    gap: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .social-icons {
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .social-icons img {
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+  }
+
+  .contact-info-box {
+    padding: 15px;
+    margin: 10px auto;
+  }
+
+  .contact-info-box h3 {
+    font-size: 1.2rem;
+  }
+}
 
 .animate-tech-icons img:nth-child(1) { transition-delay: 0s; }
 .animate-tech-icons img:nth-child(2) { transition-delay: 0.1s; }
@@ -657,5 +689,8 @@ body.light-mode .social-icons img:hover {
   }
   #mobile-menu-toggle {
     display: inline;
+  }
+    #about a{
+    width: 100%;
   }
 }
